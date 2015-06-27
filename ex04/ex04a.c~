@@ -33,7 +33,7 @@ void sound_function(void *arg)
     //int errn=0;
 
     /* allow access to sound port */
-   ioperm(SOUND_PORT, 0x13, 1) ;
+   ioperm(SOUND_PORT, 1, 1) ;
    ioperm(0x80, 1, 1) ;  // to enable _p version of inb and outb
 
    ioperm(0x43, 1, 1) ;   // PIT timer - set mode
